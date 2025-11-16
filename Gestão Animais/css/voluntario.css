@@ -1,0 +1,123 @@
+/* Gestão Animais/css/voluntario.css - Estilo Popularpet */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo-principal: #f8f8f8;
+    --cor-texto-escuro: #333333;
+    --cor-destaque-laranja: #ff7f50;
+    --cor-destaque-roxo: #6c2eb7;
+    --cor-card-fundo: #ffffff;
+    --cor-sombra: rgba(0, 0, 0, 0.08);
+    --cor-borda-input: #e0e0e0;
+    --font-principal: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-escuro);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: 40px auto;
+    background: var(--cor-card-fundo);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--cor-sombra);
+    padding: 32px 24px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--cor-destaque-roxo);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: left;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: var(--cor-texto-escuro);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card-tarefas {
+    background: #fcfcfc; /* Fundo levemente diferente */
+    border-radius: 8px;
+    padding: 24px 18px;
+    border: 1px solid var(--cor-borda-input);
+}
+
+.form-tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+select {
+    padding: 12px 15px;
+    border: 1px solid var(--cor-borda-input);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.2s, box-shadow 0.2s;
+    background: var(--cor-card-fundo);
+    color: var(--cor-texto-escuro);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--cor-destaque-roxo);
+    box-shadow: 0 0 0 3px rgba(108, 46, 183, 0.1);
+    outline: none;
+}
+
+.btn-adicionar {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    color: var(--cor-card-fundo);
+    background: var(--cor-destaque-laranja);
+}
+
+.btn-adicionar:hover {
+    background: #cc663d;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px 10px;
+        padding: 20px 15px;
+    }
+}

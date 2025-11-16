@@ -1,0 +1,128 @@
+/* Gestão Animais/css/index.css - Estilo Popularpet */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores inspiradas no Popularpet */
+    --cor-fundo-principal: #f8f8f8; 
+    --cor-texto-escuro: #333333; 
+    --cor-destaque-laranja: #ff7f50; /* Laranja da Pata */
+    --cor-destaque-roxo: #6c2eb7; /* Roxo principal */
+    --cor-card-fundo: #ffffff; 
+    --cor-sombra: rgba(0, 0, 0, 0.1); 
+    --font-principal: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-escuro);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 80px; /* Padding extra para a nav inferior */
+}
+
+header {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--cor-texto-escuro);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* Layout de Menu em Grid */
+.grid-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.menu-card {
+    background-color: var(--cor-card-fundo);
+    border-radius: 15px; 
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1; 
+    text-align: center;
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
+    box-shadow: 0 8px 20px var(--cor-sombra); 
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 25px var(--cor-sombra);
+}
+
+.menu-card i { /* Estilo padrão para ícones */
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.icon-pata {
+    color: var(--cor-destaque-laranja); /* Ícones de Pata e Voluntários */
+}
+
+.icon-roxo {
+    color: var(--cor-destaque-roxo); /* Ícones de Casa e Médico */
+}
+
+.menu-card .card-texto {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Navegação Inferior (Estilo App) */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-card-fundo);
+    box-shadow: 0 -4px 15px var(--cor-sombra);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 1000;
+}
+
+.bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+.bottom-nav .nav-item i {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.bottom-nav .nav-item.active {
+    color: var(--cor-destaque-laranja);
+}
